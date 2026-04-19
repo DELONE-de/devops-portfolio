@@ -1,119 +1,97 @@
-export const HERO_CONTENT = "Building scalable systems from code to cloud. DevOps & Cloud Engineer | Full-Stack Developer. Passionate about automating deployments, optimizing cloud infrastructure, and developing robust web applications with modern technologies.";
+export const HERO_CONTENT = "I design, automate, and ship cloud infrastructure that scales. Specializing in AWS, Kubernetes, Terraform, and CI/CD pipelines — turning complex systems into reliable, repeatable deployments.";
 
-export const ABOUT_TEXT = "I design, automate, and deploy systems that turn code into production-grade reality. My journey began with full-stack development—building web apps with Java, React, and Node.js. Over time, that foundation evolved into a passion for DevOps and Cloud Engineering, where I now focus on crafting scalable infrastructure, clean CI/CD pipelines, and resilient deployments. I work across AWS and OCI, orchestrate containers with Docker and Kubernetes, and define infrastructure with Terraform, Ansible, and CloudFormation. Behind the command line, I'm equally comfortable in version control and workflow automation, using Git, GitHub, GitLab CI/CD, CodePipeline, and Bash scripting to bridge collaboration and delivery. For me, DevOps isn't just about speed—it's about precision, repeatability, and creating systems that empower developers to ship confidently and innovate faster.";
+export const ABOUT_TEXT = "I'm a cloud and DevOps engineer driven by curiosity, automation, and the thrill of building systems that actually scale in the real world. I thrive on turning complex infrastructure into clean, efficient pipelines—whether that's orchestrating cloud environments, tightening security, or streamlining deployments so they just work.";
 
 export const SKILLS = [
   // Cloud
   { name: 'AWS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg', category: 'cloud', level: 90 },
-  { name: 'OCI', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg', category: 'cloud', level: 90 },
-
-  // Containers
-  { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg', category: 'containers', level: 90 },
-  { name: 'Kubernetes', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg', category: 'containers', level: 90 },
+  { name: 'GCP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg', category: 'cloud', level: 80 },
+  { name: 'Azure', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg', category: 'cloud', level: 80 },
 
   // Infrastructure
   { name: 'Terraform', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg', category: 'infrastructure', level: 90 },
-  { name: 'Ansible', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original-wordmark.svg', category: 'infrastructure', level: 90 },
-  { name: 'AWS CloudFormation', icon: 'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/awscloudformation.svg', category: 'infrastructure', level: 90 },
+  { name: 'AWS CDK', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg', category: 'infrastructure', level: 85 },
+  { name: 'CloudFormation', icon: 'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/awscloudformation.svg', category: 'infrastructure', level: 85 },
 
-  // DevOps / Automation
+  // Containers
+  { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg', category: 'containers', level: 90 },
+  { name: 'Kubernetes', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg', category: 'containers', level: 85 },
+
+  // DevOps
   { name: 'Linux', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-plain.svg', category: 'devops', level: 90 },
-  { name: 'Jenkins', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-plain.svg', category: 'devops', level: 90 },
-  { name: 'GitHub Actions', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg', category: 'devops', level: 90 },
-  { name: 'GitLab CI', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg', category: 'devops', level: 90 },
+  { name: 'Jenkins', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-plain.svg', category: 'devops', level: 85 },
   { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', category: 'devops', level: 90 },
-  { name: 'AWS CodePipeline', icon: 'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/awscodepipeline.svg', category: 'devops', level: 90 },
-  { name: 'AWS CodeBuild', icon: 'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/awscodebuild.svg', category: 'devops', level: 90 },
-  { name: 'Bash Scripting', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg', category: 'devops', level: 90 },
+  { name: 'GitHub Actions', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg', category: 'devops', level: 85 },
+  { name: 'Bash', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg', category: 'devops', level: 85 },
 
   // Development
-  { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg', category: 'development', level: 90 },
-  { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg', category: 'development', level: 90 },
-  { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg', category: 'development', level: 90 },
-  { name: 'React.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', category: 'development', level: 90 },
-  { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg', category: 'development', level: 90 },
-  { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg', category: 'development', level: 90 },
+  { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg', category: 'development', level: 80 },
+  { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg', category: 'development', level: 75 },
+  { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg', category: 'development', level: 80 },
+  { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', category: 'development', level: 85 },
 
   // Databases
-  { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg', category: 'database', level: 90 },
-  { name: 'MySQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', category: 'database', level: 90 },
-  { name: 'Oracle SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg', category: 'database', level: 90 },
+  { name: 'DynamoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg', category: 'database', level: 80 },
+  { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg', category: 'database', level: 80 },
+  { name: 'Aurora', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg', category: 'database', level: 75 },
 ];
 
 export const PROJECTS = [
   {
-    title: 'Amazon Clone — EKS & ArgoCD Deployment',
+    title: 'Intelli-Doc-Engine',
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    description: 'Deployed a production-grade Amazon Clone on AWS EKS with full GitOps automation via ArgoCD. Integrated CI/CD pipelines using GitHub Actions, containerized microservices with Docker, and managed configuration using Kustomize for seamless auto-sync deployments.',
-    technologies: ['AWS EKS', 'Kubernetes', 'ArgoCD', 'GitHub Actions', 'Kustomize', 'Docker', 'Terraform'],
-    category: 'devops',
-    githubLink: 'https://github.com/neerajnakka/amazon-clone-k8s-eks-argoCD',
+    description: 'A fully serverless AI-powered document Q&A engine built on AWS. Upload any document and ask questions about it in plain English — answers are grounded strictly in your documents using Retrieval-Augmented Generation (RAG).',
+    technologies: ['AWS Lambda', 'Amazon Bedrock', 'Amazon S3', 'Amazon Textract', 'OpenSearch Serverless', 'Amazon SQS', 'API Gateway', 'AWS CDK'],
+    category: 'ai',
+    githubLink: 'https://github.com/DELONE-de/Intelli-Doc-Engine.git',
     websiteLink: '',
   },
   {
-    title: 'Next.js CI/CD Pipeline with Docker & Kubernetes',
+    title: 'Subscription Cancellation System',
+    image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    description: 'Event-driven serverless subscription management system built on AWS. Handles real-time cancellation workflows with automated execution, RESTful API endpoints, and a scalable architecture using Lambda, DynamoDB, EventBridge, and API Gateway — all provisioned with AWS CDK.',
+    technologies: ['AWS CDK', 'TypeScript', 'AWS Lambda', 'DynamoDB', 'EventBridge', 'API Gateway', 'Jest'],
+    category: 'serverless',
+    githubLink: 'https://github.com/DELONE-de/subscription-cancellation-system1.0',
+    websiteLink: '',
+  },
+  {
+    title: 'Basic CloudFormation CI/CD',
+    image: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    description: 'Automated CI/CD pipeline for CloudFormation infrastructure using AWS CodePipeline and CodeBuild. Covers full pipeline stages — source, validate, package, deploy, and teardown — with IAM least-privilege roles, S3 artifact storage, and GitHub webhook integration.',
+    technologies: ['AWS CloudFormation', 'AWS CodePipeline', 'AWS CodeBuild', 'S3', 'IAM', 'GitHub', 'Bash'],
+    category: 'devops',
+    githubLink: 'https://github.com/DELONE-de/Basic-CloudFormation-CI-CD',
+    websiteLink: '',
+  },
+  {
+    title: 'Secure Kafka Pipeline',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    description: 'Production-ready Infrastructure-as-Code solution for deploying a secure, scalable Apache Kafka data pipeline using Terraform. Features multi-environment support, TLS/SASL encryption, IAM least-privilege policies, and full observability across dev, staging, and production.',
+    technologies: ['Terraform', 'Apache Kafka', 'AWS', 'TLS/SSL', 'SASL Auth', 'IAM', 'CloudWatch', 'Bash'],
+    category: 'devops',
+    githubLink: 'https://github.com/DELONE-de/SECURE-KAFKA-PIPELINE.git',
+    websiteLink: '',
+  },
+  {
+    title: 'Cloud ETL Pipeline with ML Training',
     image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    description: 'Developed and containerized a Next.js application, deploying it to Kubernetes clusters using GitHub Actions for automated CI/CD. Implemented multi-stage Docker builds, health probes, resource limits, and rolling updates for high availability.',
-    technologies: ['Next.js', 'Docker', 'Kubernetes', 'GitHub Actions', 'GHCR'],
-    category: 'devops',
-    githubLink: 'https://github.com/neerajnakka/nextjs-docker-kubernetes-app',
+    description: 'A comprehensive cloud-native ETL pipeline that processes data and trains machine learning models using AWS services, orchestrated with Terraform and Step Functions.',
+    technologies: ['Terraform', 'AWS Glue', 'SageMaker', 'Step Functions', 'Kinesis', 'Lambda', 'API Gateway', 'CloudWatch'],
+    category: 'data',
+    githubLink: 'https://github.com/DELONE-de/Cloud-ETL.git',
     websiteLink: '',
-  },
-  {
-    title: 'Realtime Chat App — MERN + Socket.IO',
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    description: 'Developed a real-time chat application using the MERN stack with Socket.IO for instant communication. Implemented custom hooks and Zustand for efficient state management. Dockerized for deployment.',
-    technologies: ['React', 'Node', 'Express', 'MongoDB', 'Socket.IO', 'Zustand', 'Docker'],
-    category: 'fullstack',
-    githubLink: 'https://github.com/neerajnakka/Mern_ChatApp',
-    websiteLink: 'https://mern-chatapp-rfj5.onrender.com/',
-  },
-  {
-    title: 'Cloud Infrastructure Automation',
-    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    description: 'Automated AWS infrastructure provisioning using Terraform with reusable modules for EC2, VPC, and S3. Integrated CI/CD with GitHub Actions for continuous deployment of cloud environments.',
-    technologies: ['AWS', 'Terraform', 'GitHub Actions', 'EC2', 'S3'],
-    category: 'devops',
-    githubLink: 'https://github.com/neerajnakka',
-    websiteLink: '',
-  },
-  {
-    title: 'Netflix Clone using React',
-    image: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    description: 'Built a Netflix clone with React, Tailwind CSS, and Firebase. Integrated React Router for seamless navigation and Firebase for authentication.',
-    technologies: ['React', 'Tailwind CSS', 'Firebase'],
-    category: 'fullstack',
-    githubLink: 'https://github.com/neerajnakka/NetflixReact_Clone',
-    websiteLink: 'https://netflix-clone-wi5g.onrender.com/',
-  },
-  {
-    title: 'Modern Portfolio with 3D Animations',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    description: 'Designed and developed a modern portfolio website featuring smooth animations, 3D effects powered by Three.js, and a sleek user interface. Leveraged Tailwind CSS for responsive design, React for dynamic interactivity, and Zustand for state management. The site incorporates Framer Motion for fluid transitions.',
-    technologies: ['React', 'Three.js', 'Tailwind CSS', 'Framer Motion', 'Zustand', 'HTML', 'CSS'],
-    category: 'fullstack',
-    githubLink: 'https://github.com/neerajnakka/Neeraj_Portfolio',
-    websiteLink: 'https://neerajnakka.onrender.com/',
-  },
-  {
-    title: 'Portfolio Website',
-    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    description: 'Dynamic React portfolio showcasing projects with Tailwind CSS design and Framer Motion animations.',
-    technologies: ['Tailwind CSS', 'React.js', 'React Router Dom', 'Framer Motion'],
-    category: 'fullstack',
-    githubLink: 'https://github.com/neerajnakka/PortFolio_React/tree/master',
-    websiteLink: 'https://neerajchandra.onrender.com/',
   },
 ];
 
 export const CONTACT = {
-  address: 'Hyderabad, Telangana, India',
-  phoneNo: '+91 9000600559',
-  email: 'neerajnakka.n@gmail.com',
+  address: 'Lagos, Nigeria',
+  phoneNo: '+234 8147461452',
+  email: 'convenati@gmail.com',
   social: {
-    github: 'https://github.com/neerajnakka',
-    linkedin: 'https://linkedin.com/in/neerajchandran',
-    twitter: 'https://twitter.com/neerajnakka',
+    github: 'https://github.com/DELONE-de/',
+    linkedin: 'https://www.linkedin.com/in/adeoluwa-convenat-6198b32a6',
+    twitter: 'https://x.com/Jamiedeennn',
   }
 };
 
@@ -129,5 +107,7 @@ export const SKILLS_BY_CATEGORY = {
 export const PROJECTS_BY_CATEGORY = {
   all: PROJECTS,
   devops: PROJECTS.filter(project => project.category === 'devops'),
-  fullstack: PROJECTS.filter(project => project.category === 'fullstack'),
+  ai: PROJECTS.filter(project => project.category === 'ai'),
+  data: PROJECTS.filter(project => project.category === 'data'),
+  serverless: PROJECTS.filter(project => project.category === 'serverless'),
 };

@@ -53,40 +53,17 @@ export const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Prepare form data for Web3Forms API
-      const formDataToSubmit = new FormData();
-      formDataToSubmit.append("access_key", "365d3bf2-3eff-4844-a5cc-ab67429f27d2");
-      formDataToSubmit.append("name", formData.name);
-      formDataToSubmit.append("email", formData.email);
-      formDataToSubmit.append("subject", formData.subject);
-      formDataToSubmit.append("message", formData.message);
+      const text = `New Portfolio Contact\n\nName: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`;
+      const whatsappUrl = `https://wa.me/2348147461452?text=${encodeURIComponent(text)}`;
+      window.open(whatsappUrl, '_blank');
 
-      // Submit to Web3Forms API
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formDataToSubmit
-      });
-
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-
-      const data = await response.json();
-
-      if (data.success) {
-        setIsSubmitted(true);
-        
-        // Reset form after success
-        setTimeout(() => {
-          setIsSubmitted(false);
-          setFormData({ name: '', email: '', subject: '', message: '' });
-        }, 3000);
-      } else {
-        throw new Error("Form submission failed");
-      }
+      setIsSubmitted(true);
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      }, 3000);
     } catch (error) {
-      // Handle network or other errors
-      setErrors(prev => ({ ...prev, message: "Failed to send message. Please try again." }));
+      setErrors(prev => ({ ...prev, message: "Something went wrong. Please try again." }));
     } finally {
       setIsSubmitting(false);
     }

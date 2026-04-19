@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X, ChevronRight, BookOpen, FileText } from 'lucide-react';
+import { Menu, X, ChevronRight, FileText } from 'lucide-react';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,6 @@ export const Navbar = () => {
     { path: '/about', label: 'About' },
     { path: '/skills', label: 'Skills' },
     { path: '/projects', label: 'Projects' },
-    { path: '/blog', label: 'Blog', icon: BookOpen },
     { path: '/case-studies', label: 'Case Studies', icon: FileText },
     { path: '/contact', label: 'Contact' },
   ];
@@ -26,11 +25,10 @@ export const Navbar = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 group">
-              <div className="text-primary-500 font-mono font-bold text-xl tracking-wide">
+              <div className="font-mono font-bold text-lg tracking-wide">
                 <span className="text-accent-500">&gt;</span>
-                <span className="group-hover:text-primary-500 transition-colors duration-200">
-                  _
-                </span>
+                <span className="text-primary-500 ml-1">Adeoluwa</span>
+                <span className="text-neutral-300">_</span>
               </div>
             </Link>
 

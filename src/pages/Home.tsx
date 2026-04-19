@@ -7,10 +7,10 @@ import { HERO_CONTENT, SKILLS, PROJECTS } from '../data/portfolio';
 
 export const Home = () => {
   const stats = [
-    { label: 'Years Experience', value: '1+' },
+    { label: 'Years Experience', value: '3+' },
     { label: 'Cloud Platforms', value: '3' },
-    { label: 'Projects Completed', value: '10+' },
-    { label: 'Technologies', value: '19+' },
+    { label: 'Projects Completed', value: '15+' },
+    { label: 'Technologies', value: '20+' },
   ];
 
   const featuredSkills = SKILLS.slice(0, 6);
@@ -26,9 +26,19 @@ export const Home = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="space-y-8"
           >
+            {/* Name */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="font-sans text-lg md:text-xl text-neutral-300 tracking-widest uppercase"
+            >
+              Adeoluwa Covenant
+            </motion.div>
+
             {/* Terminal prompt */}
             <div className="font-mono text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide">
               <span className="text-accent-500 mr-3">$</span>
@@ -37,7 +47,7 @@ export const Home = () => {
 
             {/* Typewriter heading */}
             <div className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight text-primary-500">
-              <Typewriter text="DevOps & Cloud Engineer" delay={80} />
+              <Typewriter text="DevOps & Cloud Engineer" delay={50} />
               <span className="terminal-cursor ml-2" />
             </div>
 
@@ -45,7 +55,7 @@ export const Home = () => {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 2 }}
+              transition={{ delay: 1.2 }}
               className="text-xl md:text-2xl text-neutral-200 max-w-4xl mx-auto leading-relaxed"
             >
               {HERO_CONTENT}
@@ -55,7 +65,7 @@ export const Home = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2.5 }}
+              transition={{ delay: 1.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
             >
               <Link

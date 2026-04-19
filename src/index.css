@@ -33,8 +33,8 @@ img {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.3); }
-  50% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.6); }
+  0%, 100% { box-shadow: 0 0 5px rgba(56, 189, 248, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(56, 189, 248, 0.6); }
 }
 
 .animate-grid-move {
@@ -89,10 +89,10 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #22c55e;
+  background: #38BDF8;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #16a34a;
+  background: #0284C7;
 }

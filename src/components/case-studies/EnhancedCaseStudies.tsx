@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { 
   FileText, 
   Calendar, 
@@ -69,125 +70,90 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     id: 1,
-    title: "Amazon Clone — EKS & ArgoCD Deployment",
-    subtitle: "E-commerce Platform with GitOps",
+    title: "Intelli-Doc-Engine",
+    subtitle: "Serverless AI Document Q&A on AWS",
     category: "DevOps",
     featured: true,
     timeline: {
-      start: "Sep 2024",
-      end: "Nov 2024",
-      duration: "2 months"
+      start: "2024",
+      end: "2024",
+      duration: "6 weeks"
     },
-    challenge: "Migrate a complex e-commerce platform to a scalable Kubernetes infrastructure while implementing GitOps practices for automated deployments and ensuring zero-downtime updates.",
+    challenge: "Build a fully serverless, scalable document intelligence system that lets users upload any document and ask questions in plain English — with answers grounded strictly in the document content using RAG, not hallucinated by the model.",
     solution: [
-      "Designed and implemented production-grade EKS cluster with multi-AZ deployment",
-      "Set up ArgoCD for GitOps-based continuous deployment with progressive delivery",
-      "Implemented automated CI/CD pipelines with GitHub Actions and Docker",
-      "Configured monitoring and alerting with Prometheus and Grafana",
-      "Established security practices with RBAC, network policies, and image scanning"
+      "Designed event-driven serverless architecture using AWS Lambda and SQS for async document processing",
+      "Integrated Amazon Textract for accurate text extraction from PDFs and scanned documents",
+      "Built a vector search layer with OpenSearch Serverless to enable semantic retrieval",
+      "Used Amazon Bedrock (Claude) for grounded answer generation via Retrieval-Augmented Generation (RAG)",
+      "Provisioned all infrastructure with AWS CDK for reproducible, version-controlled deployments",
+      "Exposed a clean REST API via API Gateway for frontend and third-party integration"
     ],
     impact: [
-      "Reduced deployment time from 45 minutes to 5 minutes",
-      "Achieved 99.9% uptime with automated failover",
-      "Decreased infrastructure costs by 30% through autoscaling",
-      "Improved developer productivity with self-service deployments",
-      "Enhanced security posture with automated compliance checks"
+      "Zero server management — fully serverless, scales to zero when idle",
+      "Document Q&A responses grounded 100% in uploaded content, eliminating hallucinations",
+      "End-to-end pipeline from upload to answer in under 10 seconds for typical documents",
+      "Infrastructure fully reproducible via CDK — deployable in minutes to any AWS account",
+      "Cost-efficient: pay-per-use model with no idle compute costs"
     ],
-    technologies: ["AWS EKS", "ArgoCD", "GitOps", "Kubernetes", "Docker", "Terraform", "GitHub Actions"],
+    technologies: ["AWS Lambda", "Amazon Bedrock", "Amazon S3", "Amazon Textract", "OpenSearch Serverless", "Amazon SQS", "API Gateway", "AWS CDK"],
     impactMetrics: {
-      deploymentTime: { before: "45 min", after: "8 min", improvement: "82%" },
-      cost: { before: "$2,400/mo", after: "$1,800/mo", reduction: "25%" },
-      availability: { uptime: "99.5%", improvement: "1.5%" },
-      scalability: { capacity: "5x", improvement: "500%" }
+      deploymentTime: { before: "Manual setup", after: "< 5 min (CDK)", improvement: "95%" },
+      performance: { improvement: "Sub-10s end-to-end" },
+      availability: { uptime: "99.9%", improvement: "Serverless SLA" }
     },
     architecture: {
-      components: ["EKS Cluster", "ArgoCD", "Application Pods", "Load Balancers", "Database", "Cache Layer"],
-      pattern: "Microservices with GitOps"
+      components: ["S3 Upload Trigger", "SQS Queue", "Lambda Processor", "Textract", "OpenSearch", "Bedrock (Claude)", "API Gateway"],
+      pattern: "Event-Driven Serverless RAG"
     }
   },
   {
     id: 2,
-    title: "Realtime Chat Application",
-    subtitle: "WebSocket Architecture with Scaling",
-    category: "Full-Stack",
-    featured: false,
-    timeline: {
-      start: "Oct 2024",
-      end: "Dec 2024",
-      duration: "3 months"
-    },
-    challenge: "Build a real-time chat application capable of handling thousands of concurrent users with message persistence, typing indicators, and file sharing capabilities.",
-    solution: [
-      "Implemented WebSocket-based real-time communication architecture",
-      "Designed horizontal scaling strategy with Redis Pub/Sub for session sharing",
-      "Created message queue system for handling high message volumes",
-      "Built responsive React frontend with real-time UI updates",
-      "Implemented end-to-end encryption for secure communications"
-    ],
-    impact: [
-      "Supports 10,000+ concurrent users seamlessly",
-      "Achieved <100ms message delivery latency",
-      "Reduced server costs by 40% through efficient resource usage",
-      "Improved user engagement by 65% with instant messaging",
-      "Maintained 99.8% uptime with automatic scaling"
-    ],
-    technologies: ["Node.js", "WebSocket", "Redis", "MongoDB", "React", "Socket.io", "AWS"],
-    impactMetrics: {
-      performance: { improvement: "80%" },
-      scalability: { capacity: "500+ users", improvement: "300%" },
-      availability: { uptime: "99.2%", improvement: "1.2%" }
-    },
-    architecture: {
-      components: ["WebSocket Server", "Redis Cluster", "MongoDB", "React Client", "CDN", "Load Balancer"],
-      pattern: "Real-time with Horizontal Scaling"
-    }
-  },
-  {
-    id: 3,
-    title: "Cloud Infrastructure Automation",
-    subtitle: "Multi-Cloud DevOps Pipeline",
+    title: "Cloud ETL Pipeline with ML Training",
+    subtitle: "Cloud-Native Data Engineering & ML Orchestration on AWS",
     category: "Cloud Infrastructure",
     featured: true,
     timeline: {
-      start: "Aug 2024",
-      end: "Oct 2024",
-      duration: "3 months"
+      start: "2024",
+      end: "2024",
+      duration: "8 weeks"
     },
-    challenge: "Design and implement a comprehensive cloud infrastructure automation solution that supports multi-cloud deployments with consistent security, monitoring, and governance across AWS, Azure, and GCP.",
+    challenge: "Design a production-grade cloud-native ETL pipeline that ingests streaming data, transforms it at scale, and feeds it directly into a machine learning training workflow — all orchestrated automatically without manual intervention.",
     solution: [
-      "Created unified Infrastructure as Code templates using Terraform",
-      "Implemented automated security scanning and compliance checking",
-      "Built centralized logging and monitoring with ELK stack",
-      "Designed disaster recovery and backup automation",
-      "Established governance frameworks with policy-as-code"
+      "Built real-time data ingestion with Amazon Kinesis for streaming event capture",
+      "Implemented scalable data transformation jobs using AWS Glue with PySpark",
+      "Orchestrated the full ETL-to-ML workflow using AWS Step Functions state machines",
+      "Integrated Amazon SageMaker for automated model training triggered post-ETL",
+      "Provisioned all infrastructure with Terraform for multi-environment consistency",
+      "Set up CloudWatch dashboards and alarms for end-to-end pipeline observability"
     ],
     impact: [
-      "Reduced infrastructure provisioning time by 75%",
-      "Achieved consistent security posture across all cloud providers",
-      "Decreased compliance violations by 90%",
-      "Improved disaster recovery time from hours to minutes",
-      "Enhanced resource utilization efficiency by 45%"
+      "Fully automated pipeline from raw data ingestion to trained ML model — zero manual steps",
+      "Scalable Glue jobs handle variable data volumes without infrastructure changes",
+      "Step Functions orchestration provides clear audit trail and automatic error handling",
+      "Terraform IaC enables consistent deployments across dev, staging, and production",
+      "CloudWatch monitoring gives real-time visibility into pipeline health and failures"
     ],
-    technologies: ["Terraform", "AWS", "Azure", "GCP", "Ansible", "Jenkins", "ELK Stack"],
+    technologies: ["Terraform", "AWS Glue", "SageMaker", "Step Functions", "Kinesis", "Lambda", "API Gateway", "CloudWatch"],
     impactMetrics: {
-      deploymentTime: { before: "4 hours", after: "45 min", improvement: "81%" },
-      cost: { before: "$3,200/mo", after: "$2,400/mo", reduction: "25%" },
-      performance: { improvement: "120%" }
+      deploymentTime: { before: "Manual pipeline runs", after: "Fully automated", improvement: "100%" },
+      performance: { improvement: "Parallel Glue job execution" },
+      scalability: { capacity: "Elastic", improvement: "Auto-scales with data volume" }
     },
     architecture: {
-      components: ["Terraform Modules", "CI/CD Pipeline", "Security Scanning", "Monitoring", "Backup System"],
-      pattern: "Multi-Cloud IaC"
+      components: ["Kinesis Stream", "AWS Glue", "S3 Data Lake", "Step Functions", "SageMaker", "Lambda", "CloudWatch"],
+      pattern: "Serverless ETL + ML Orchestration"
     }
   }
 ];
 
 const EnhancedCaseStudies: React.FC = () => {
+  const navigate = useNavigate();
   const [selectedStudy, setSelectedStudy] = useState<number | null>(caseStudies[0]?.id || null);
   const [activeTab, setActiveTab] = useState<'overview' | 'solution' | 'results'>('overview');
 
   const selectedStudyData = caseStudies.find(study => study.id === selectedStudy);
 
-  const categories = ['All', 'DevOps', 'Cloud Infrastructure', 'Full-Stack'];
+  const categories = ['All', 'DevOps', 'Cloud Infrastructure'];
   const [selectedCategory, setSelectedCategory] = useState('All');
   
   const filteredStudies = selectedCategory === 'All' 
@@ -230,23 +196,23 @@ const EnhancedCaseStudies: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12"
         >
           <StatsCard
-            title="Projects Completed"
-            value="3"
+            title="Case Studies"
+            value="2"
             icon={<FileText className="w-6 h-6" />}
             color="completed"
           />
           <StatsCard
-            title="Cost Savings"
-            value="35%"
-            change="Average across projects"
-            icon={<TrendingUp className="w-6 h-6" />}
+            title="AWS Services Used"
+            value="12+"
+            change="Across both projects"
+            icon={<Cloud className="w-6 h-6" />}
             color="completed"
             trend="up"
           />
           <StatsCard
-            title="Uptime Achieved"
-            value="99.5%"
-            change="Production reliability"
+            title="Infrastructure"
+            value="100% IaC"
+            change="CDK & Terraform"
             icon={<Target className="w-6 h-6" />}
             color="completed"
             trend="up"
@@ -592,19 +558,15 @@ const EnhancedCaseStudies: React.FC = () => {
           className="mt-16 bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-400/30 rounded-lg p-8 text-center"
         >
           <h2 className="text-2xl font-bold text-green-400 mb-4">
-            INTERESTED_IN_A_SIMILAR_PROJECT?
+            MORE_CASE_STUDIES_COMING_SOON
           </h2>
           <p className="text-green-200 mb-6 max-w-2xl mx-auto">
-            Let's discuss how we can transform your infrastructure and achieve similar results for your organization.
+            These are my current featured projects. More case studies are on the way — in the meantime, let's talk about how I can bring the same approach to your infrastructure.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <InteractiveButton variant="primary" icon={<ArrowRight className="w-4 h-4" />}>
+            <InteractiveButton variant="primary" icon={<ArrowRight className="w-4 h-4" />} onClick={() => navigate('/contact')}>
               Start Your Project
-            </InteractiveButton>
-            
-            <InteractiveButton variant="outline" icon={<FileText className="w-4 h-4" />}>
-              Download Case Study PDF
             </InteractiveButton>
           </div>
         </motion.section>

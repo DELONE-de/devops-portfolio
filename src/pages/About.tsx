@@ -6,17 +6,17 @@ import { Calendar, MapPin, Code, Zap } from 'lucide-react';
 export const About = () => {
   const timeline = [
     {
-      year: '2023 - Present',
-      title: 'Freelance DevOps & Cloud Engineer',
-      company: 'Self-Employed',
-      description:
-        'Working on freelance projects focusing on cloud automation, CI/CD, and container orchestration using AWS, Docker, and Kubernetes.',
-      icon: Code,},
+      year: '2022 - Present',
+      title: 'Cloud & DevOps Engineer',
+      company: 'Self-Employed / Freelance',
+      description: 'Designing and deploying cloud infrastructure on AWS, GCP, and Azure. Building CI/CD pipelines, container orchestration, and serverless architectures.',
+      icon: Code,
+    },
     {
-      year: '2019 - 2023',
-      title: 'Computer Science Graduate',
-      company: 'CVR College Of Engineering',
-      description: 'Bachelor\'s degree with focus on software engineering and cloud computing.',
+      year: '2025 - 2029',
+      title: 'Information Technology Graduate',
+      company: 'University of Ilesa',
+      description: 'Bachelor\'s degree in Information Technology with focus on software engineering and cloud computing.',
       icon: Calendar,
     },
   ];
@@ -24,18 +24,18 @@ export const About = () => {
   const philosophyPoints = [
     {
       icon: Zap,
-      title: 'Automation First',
-      description: 'Every manual process should be automated, every deployment should be reproducible.',
+      title: 'Automate Everything',
+      description: 'If you do it twice, automate it. Manual processes are bugs waiting to happen — I build pipelines that deploy, test, and recover without human intervention.',
     },
     {
       icon: Code,
-      title: 'Infrastructure as Code',
-      description: 'Treat infrastructure with the same discipline as application code.',
+      title: 'Infrastructure is Code',
+      description: 'Every server, network, and policy lives in version control. I treat cloud infrastructure with the same rigor as application code — reviewed, tested, and reproducible.',
     },
     {
       icon: MapPin,
-      title: 'Cloud Native',
-      description: 'Build for the cloud from day one, embrace containerization and orchestration.',
+      title: 'Build for Failure',
+      description: 'Production will break. I design systems that expect it — with self-healing deployments, multi-region redundancy, and observability baked in from day one.',
     },
   ];
 
@@ -67,7 +67,7 @@ export const About = () => {
                 </div>
                 <div className="space-y-4 text-neutral-200 leading-relaxed">
                   <Typewriter
-                    text="Hello, I'm Neeraj Chandra Nakka, and I turn code into production reality."
+                    text="Hello, I'm Adeoluwa Covenant, and I turn code into production reality."
                     delay={30}
                     className="text-primary-500 font-semibold block mb-4"
                   />
@@ -108,19 +108,19 @@ export const About = () => {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="text-neutral-400">Experience</span>
-                    <span className="text-primary-500 font-mono">1+ years</span>
+                    <span className="text-primary-500 font-mono">3+ years</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-neutral-400">Cloud Platforms</span>
-                    <span className="text-primary-500 font-mono">AWS, Azure</span>
+                    <span className="text-primary-500 font-mono">AWS, GCP, Azure</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-neutral-400">Projects</span>
-                    <span className="text-primary-500 font-mono">7+ deployed</span>
+                    <span className="text-primary-500 font-mono">2+ deployed</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-neutral-400">Technologies</span>
-                    <span className="text-primary-500 font-mono">19+ mastered</span>
+                    <span className="text-primary-500 font-mono">20+ mastered</span>
                   </div>
                 </div>
               </div>
@@ -219,7 +219,7 @@ export const About = () => {
               Tech Philosophy
             </h2>
             <p className="text-neutral-400 max-w-2xl mx-auto">
-              Core principles that guide my approach to software engineering and DevOps
+              I don't just manage infrastructure — I obsess over it. Every pipeline, every deployment, every system I touch is built to be faster, safer, and more resilient than before.
             </p>
           </motion.div>
 

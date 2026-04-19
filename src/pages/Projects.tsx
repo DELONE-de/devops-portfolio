@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TerminalHeader } from '../components/TerminalHeader';
 import { ExternalLink, Github, Filter } from 'lucide-react';
-import { PROJECTS_BY_CATEGORY } from '../data/portfolio';
+import { PROJECTS_BY_CATEGORY, CONTACT } from '../data/portfolio';
 
 export const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -10,7 +10,9 @@ export const Projects = () => {
   const filters = [
     { id: 'all', label: 'All Projects', count: PROJECTS_BY_CATEGORY.all.length },
     { id: 'devops', label: 'DevOps', count: PROJECTS_BY_CATEGORY.devops.length },
-    { id: 'fullstack', label: 'Full-Stack', count: PROJECTS_BY_CATEGORY.fullstack.length },
+    { id: 'ai', label: 'AI / ML', count: PROJECTS_BY_CATEGORY.ai.length },
+    { id: 'data', label: 'Data Engineering', count: PROJECTS_BY_CATEGORY.data.length },
+    { id: 'serverless', label: 'Serverless', count: PROJECTS_BY_CATEGORY.serverless.length },
   ];
 
   const getProjects = () => {
@@ -85,11 +87,18 @@ export const Projects = () => {
                   {/* Project Type Badge */}
                   <div className="absolute top-4 right-4">
                     <span className={`px-3 py-1 rounded-full text-xs font-mono font-medium ${
-                      project.category === 'devops' 
-                        ? 'bg-green-500/20 text-green-500 border border-green-500/30'
-                        : 'bg-blue-500/20 text-blue-500 border border-blue-500/30'
+                      project.category === 'ai'
+                        ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
+                        : project.category === 'data'
+                        ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
+                        : project.category === 'serverless'
+                        ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
+                        : 'bg-green-500/20 text-green-400 border border-green-500/30'
                     }`}>
-                      {project.category === 'devops' ? 'DevOps' : 'Full-Stack'}
+                      {project.category === 'ai' ? 'AI / ML'
+                        : project.category === 'data' ? 'Data Engineering'
+                        : project.category === 'serverless' ? 'Serverless'
+                        : 'DevOps'}
                     </span>
                   </div>
                 </div>
@@ -191,8 +200,12 @@ export const Projects = () => {
                   <span className="text-primary-500">{PROJECTS_BY_CATEGORY.devops.length}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Full-Stack Projects:</span>
-                  <span className="text-primary-500">{PROJECTS_BY_CATEGORY.fullstack.length}</span>
+                  <span>AI / ML Projects:</span>
+                  <span className="text-primary-500">{PROJECTS_BY_CATEGORY.ai.length}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Data Engineering:</span>
+                  <span className="text-primary-500">{PROJECTS_BY_CATEGORY.data.length}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Technologies Used:</span>
@@ -227,12 +240,12 @@ export const Projects = () => {
               Interested in Collaboration?
             </h2>
             <p className="text-xl text-neutral-200 mb-8 leading-relaxed">
-              These projects showcase my expertise in DevOps and full-stack development. 
+              These projects showcase my expertise in DevOps, Cloud, and AI/ML engineering. 
               Let's discuss how we can work together on your next project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://github.com/neerajnakka"
+                href={CONTACT.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-bg-surface font-semibold rounded-lg hover:bg-primary-700 transition-all duration-200 shadow-glow hover:shadow-card-hover"
